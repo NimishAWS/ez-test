@@ -1,0 +1,97 @@
+{% load i18n %}
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      style="
+        width: 560px;
+        height: 561px;
+        margin: auto;
+        background-color: #8fb7ff;
+        font-family: 'DM Sans';
+        background-image: url('https://i.ibb.co/1G5vG8f/Email-template1.png');
+        background-repeat: no-repeat;
+      "
+    >
+      <table style="border: 0px; border-collapse: collapse; margin: auto">
+        <tr>
+          <td>
+            <div style="text-align: center; margin-top: 26px">
+              <img src="https://i.ibb.co/zZwksSd/logo.png" alt="logo" />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div
+              style="
+                width: 400px;
+                height: 352px;
+                border-radius: 13px;
+                margin-top: 20px;
+                text-align: center;
+                background-color: #fff;
+                font-size: 12px;
+              "
+            >
+              <img
+                style="margin-top: 27px"
+                src="https://i.ibb.co/bXVh5vx/mail-icon.png"
+                alt="mail-icon"
+              />
+              <div style="margin-top: 30px">
+                Hello
+                <span style="color: #0055eb">{{ first_name }},</span><br />
+                Please click on the Activate <br/>  to confirm your
+                registration<br />
+              </div>
+              <a href="{{absurl}}">
+                <button
+                  style="
+                    margin-top: 27px;
+                    width: 132px;
+                    height: 32px;
+                    background-color: #0857fb;
+                    font-size: 14px;
+                    color: #fff;
+                    border: 1px solid #0857fb;
+                    border-radius: 4px;
+                  "
+                >
+                  Activate
+                </button></a
+              >
+              <div style="margin-top: 26px">
+                Thanks!<br />
+                The Ez Team
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div
+              style="
+                color: #ffffff;
+                font-size: 12px;
+                margin-top: 65px;
+                text-align: center;
+              "
+            >
+              Copyright 2020 Ez. All right reserved
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
