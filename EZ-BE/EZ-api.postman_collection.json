@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "a3206436-7109-4e71-bb5a-27848a313bee",
+		"name": "EZ-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17544221",
+		"_collection_link": "https://blue-satellite-266525.postman.co/workspace/Nimish-workspace~6932d3e8-500d-429b-8eaa-a02397084c53/collection/17544221-a3206436-7109-4e71-bb5a-27848a313bee?action=share&source=collection_link&creator=17544221"
+	},
+	"item": [
+		{
+			"name": "Verify-Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/email-verify/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkzODUyNzQ1LCJpYXQiOjE2OTM3NjYzNDUsImp0aSI6ImU2MDMxODkxMmEzZjRiNWI4MDJkMGY2ODMxNzFkZjY0IiwidXNlcl9pZCI6OX0.ggzjWlGkiPBqXzet3VKlgFepQ_suzePTPdnj6VIkWWU",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"email-verify",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkzODUyNzQ1LCJpYXQiOjE2OTM3NjYzNDUsImp0aSI6ImU2MDMxODkxMmEzZjRiNWI4MDJkMGY2ODMxNzFkZjY0IiwidXNlcl9pZCI6OX0.ggzjWlGkiPBqXzet3VKlgFepQ_suzePTPdnj6VIkWWU"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register-operational-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"nimish@gmail.com\",\n  \"first_name\": \"Chetan\",\n  \"last_name\": \"operational\",\n  \"password\": \"Password@123\",\n  \"is_operation\" : true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register-client-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"nagapurenimish@gmail.com\",\n  \"first_name\": \"Nimish\",\n  \"last_name\": \"client\",\n  \"password\": \"Password@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg2NDkxMjkwLCJpYXQiOjE2ODY0MDQ4OTAsImp0aSI6IjA5NzM5ZjBlMmI4MDRkNTdhZmQ2NWQ4ZjM0Nzk5MjFjIiwidXNlcl9pZCI6Mn0.Smi-0nGX-EWi1OER6oo-VAI6M-IKAujo6U-WiK351V4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ3MzMzNDIzLCJpYXQiOjE2NDcyNDcwMjMsImp0aSI6IjMyZTc0ODE3MTcyMTQ0NmFhZDM1ZTkzZjYyYzdiZDFkIiwidXNlcl9pZCI6Mn0.Q-3OimifgEF8CUiUBxyhVXKBUyT9XyE4fUVmHNet1dw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refresh\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY4NjU3NzY5MCwiaWF0IjoxNjg2NDA0ODkwLCJqdGkiOiIwOWUyYmZhZTI5NGQ0M2E0OGQyOGQ2NTZiYzc2YmFmZCIsInVzZXJfaWQiOjJ9.r28Qv4e5wrhH99499Kruqa_I_d9u9_YYZ7W68QvrCqg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login-client-Operational",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "csrftoken=4VhOyhXutNnPvAg0QjIOO5bWjBNTJLUL"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"nagapurenimish@gmail.com\",\n    \"password\": \"Password@123\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "operational-user-upload-files",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkzOTAwOTc0LCJpYXQiOjE2OTM4MTQ1NzQsImp0aSI6ImExNzk0ZjI2ZjU2MDRhZmVhOTllYzZkZTFkNWQ3YzZkIiwidXNlcl9pZCI6NDB9.3HITWKtExG9SrBFXS7LY7O1HZHlxUROj2ueVf5-Tuq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/NimishMac/Desktop/XDR Map.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/upload/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"upload",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all-the-files",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkzOTAxMDMzLCJpYXQiOjE2OTM4MTQ2MzMsImp0aSI6IjBjN2JjZjlmMjY5ZTQxZmNiZDExOWU3ODRiMzk3ZDQ0IiwidXNlcl9pZCI6NDF9.Fwx9ww6RBO4TEysWldkExsX4qLJOTwO_VtA_SBcywfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/uploaded-files/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"uploaded-files",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "download-file",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkzOTAxMDMzLCJpYXQiOjE2OTM4MTQ2MzMsImp0aSI6IjBjN2JjZjlmMjY5ZTQxZmNiZDExOWU3ODRiMzk3ZDQ0IiwidXNlcl9pZCI6NDF9.Fwx9ww6RBO4TEysWldkExsX4qLJOTwO_VtA_SBcywfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/download/10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"download",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
