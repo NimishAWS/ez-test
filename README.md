@@ -1,4 +1,4 @@
-# ez-test
+# ez-filesharing-app
 
 
 
